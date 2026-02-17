@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      font-family: 'Courier New', monospace;
+      color: #fff;
+      flex-direction: column;
+    }
+
+    .loading-text {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .dots::after {
+      content: '...';
+      animation: dots 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      33% { content: '.'; }
+      66% { content: '..'; }
+      100% { content: '...'; }
+    }
+
+    #result {
+      font-size: 1.6em;
+      margin-top: 30px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .next {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.3em;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0,0,0,0.3);
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .next:hover {
+      background: rgba(0,0,0,0.6);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-text">Calculating how much Yuumei means to Himanshu<span class="dots"></span></div>
+  <div id="result">Error: Too much love to calculate ❤️</div>
+  <a href="Khyatiiii.html" class="next">Final Reveal ➝</a>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('result').style.opacity = 1;
+      document.querySelector('.next').style.display = 'inline-block';
+    }, 4000); // reveal after 4 seconds
+  </script>
+</body>
+</html>

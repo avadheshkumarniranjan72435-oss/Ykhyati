@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Time!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      font-family: 'Comic Sans MS', cursive;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    button {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid #fff;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background: rgba(255,255,255,0.4);
+      transform: scale(1.1);
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.5em;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .next {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.3em;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0,0,0,0.3);
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    .next:hover {
+      background: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <h1>Who is the most important person in Himanshu’s life?</h1>
+  <div class="options">
+    <button onclick="showResult()">🍕 Pizza</button>
+    <button onclick="showResult()">😴 Sleep</button>
+    <button onclick="showResult()">💕 Yuumei</button>
+  </div>
+  <div id="result">Correct! It’s always Yuumei 💖</div>
+  <a href="Khyatii.html" class="next">Hop In Again ➝</a>
+
+  <script>
+    function showResult() {
+      document.getElementById('result').style.opacity = 1;
+      document.querySelector('.next').style.display = 'inline-block';
+    }
+  </script>
+</body>
+</html>

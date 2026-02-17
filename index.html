@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hi Yuumei</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      font-family: 'Courier New', monospace;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid white;
+      white-space: nowrap;
+      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+
+    .hopin {
+      position: absolute;
+      bottom: 20px;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0,0,0,0.3);
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .hopin:hover {
+      background: rgba(0,0,0,0.6);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="typewriter">Hi Yuumei, there's something I made for you...</h1>
+  <a href="Khyati.html" class="hopin">✨ Hop In ✨</a>
+</body>
+</html>
